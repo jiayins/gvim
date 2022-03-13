@@ -22,7 +22,7 @@ call vundle#end()
 
 filetype plugin indent on
 
-" 解决乱码问题
+"解决乱码问题
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1,gbk,gb18030,gk2312
 if has("win32")
@@ -39,7 +39,7 @@ language messages zh_CN.utf-8
 set guifont=Consolas:h11:cANSI:qDRAFT
 set number
 syntax on
-" 去掉菜单栏和工具栏
+"去掉菜单栏和工具栏
 set guioptions=
 set tabstop=4
 set expandtab
@@ -54,22 +54,22 @@ set t_Co=256
 set hlsearch
 set timeoutlen=500
 let mapleader=' '
-" 关闭提示音和闪屏
+"关闭提示音和闪屏
 set vb t_vb=
 au GuiEnter * set t_vb=
-" 解决back键不能删除的问题
+"解决back键不能删除的问题
 set backspace=2
-" 主题设置
+"主题设置
 set background=light
 let g:one_allow_italics = 1
 colorscheme one 
 if (has("termguicolors"))
     set termguicolors
 endif
-" 支持用python写的插件
+"支持用python写的插件
 set pythonthreedll=python36.dll
 
-" LeaderF配置
+"LeaderF配置
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 noremap <silent> <Leader>f :Leaderf file<CR>
@@ -77,7 +77,7 @@ noremap <silent> <Leader>l :Leaderf line<CR>
 noremap <silent> <Leader>g :Leaderf rg<CR>
 
 
-" UltiSnips配置
+"UltiSnips配置
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
@@ -86,13 +86,13 @@ let g:UltiSnipsSnippetDirectories=[$VIM."/vimfiles/ultisnips"]
 "markdowm复制图片配置
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
-" 翻译插件配置
+"翻译插件配置
 let g:translator_window_type='popup'
 let g:translator_default_engines=['bing']
 nmap <silent> <Leader>t <Plug>TranslateW
 vmap <silent> <Leader>t <Plug>TranslateWV
 
-" 窗口配置
+"窗口配置
 noremap <silent> sv :vsp<CR>
 noremap <silent> sp :sp<CR>
 noremap <silent> sc <C-w>c<CR>
@@ -109,18 +109,18 @@ noremap <silent> <A-j> <C-w>j
 noremap <silent> <A-k> <C-w>k
 noremap <silent> <A-l> <C-w>l
 
-" NERDTree配置
+"NERDTree配置
 noremap <silent> <C-n> :NERDTree<CR>
 noremap <silent> <Leader>n :NERDTreeToggle<CR>
 
-" tab配置
+"tab配置
 noremap <silent> <C-c> :tabclose<CR>
 noremap <silent> <C-h> :tabprevious<CR>
 noremap <silent> <C-l> :tabnext<CR>
 
 noremap <silent> <Leader>s :Startify<CR>
 
-" 复制粘贴
+"复制粘贴
 noremap <silent> <Leader>y "*y
 noremap <silent> <Leader>v "*p
 inoremap <silent> <Leader>v <C-r>*
