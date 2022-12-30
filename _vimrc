@@ -18,6 +18,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ferrine/md-img-paste.vim'
 Plugin 'voldikss/vim-translator'
+Plugin 'sainnhe/everforest'
 call vundle#end()  
 
 filetype plugin indent on
@@ -36,7 +37,7 @@ source $VIMRUNTIME/menu.vim
 "解决consle提示信息输出乱码
 language messages zh_CN.utf-8
 
-set guifont=Consolas:h11:cANSI:qDRAFT
+set guifont=JetBrains_Mono:h9:cANSI:qDRAFT
 set number
 syntax on
 "去掉菜单栏和工具栏
@@ -60,9 +61,9 @@ au GuiEnter * set t_vb=
 "解决back键不能删除的问题
 set backspace=2
 "主题设置
-set background=light
+set background=dark
 let g:one_allow_italics = 1
-colorscheme one 
+colorscheme everforest 
 if (has("termguicolors"))
     set termguicolors
 endif
@@ -124,3 +125,5 @@ noremap <silent> <Leader>s :Startify<CR>
 noremap <silent> <Leader>y "*y
 noremap <silent> <Leader>v "*p
 inoremap <silent> <Leader>v <C-r>*
+
+inoremap jk <esc>
